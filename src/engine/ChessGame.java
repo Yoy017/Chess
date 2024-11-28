@@ -9,6 +9,19 @@ public class ChessGame implements ChessController {
 
   private ChessView view;
 
+  private Piece[] pieces;
+
+  public ChessGame() {
+    pieces = new Piece[]{
+            new Bishop(), new Bishop(),
+            new King(), new Queen(),
+            new Knight(), new Knight(),
+            new Rook(), new Rook(),
+            new Pawn(), new Pawn(), new Pawn(), new Pawn(),
+            new Pawn(), new Pawn(), new Pawn(), new Pawn(),
+    };
+  }
+
   @Override
   public void start(ChessView view) {
     this.view = view;
