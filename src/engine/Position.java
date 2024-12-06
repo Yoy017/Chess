@@ -3,7 +3,7 @@ package engine;
 public class Position {
     private int x;
     private int y;
-    private Piece piece
+    private Piece piece;
 
     public Position(int x, int y) {
         this.x = x;

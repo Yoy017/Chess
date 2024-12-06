@@ -5,7 +5,7 @@ import chess.ChessView;
 import chess.PieceType;
 import chess.PlayerColor;
 
-import engine.Case;
+import engine.Board;
 
 public class ChessGame implements ChessController {
 

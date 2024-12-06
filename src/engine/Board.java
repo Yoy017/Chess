@@ -1,11 +1,14 @@
 package engine;
 
+import chess.PlayerColor;
+import engine.Piece;
+
 public class Board {
-    private const int BOARD_SIZE = 8;
+    private final int BOARD_SIZE = 8;
     private Position[][] board;
 
     public Board() {
-        this.board = new Board[BOARD_SIZE][BOARD_SIZE];
+        this.board = new Position[BOARD_SIZE][BOARD_SIZE];
         initializeBoard();
     }
 
@@ -62,10 +65,6 @@ public class Board {
     public void setKings() {
         board[4][0].setOccupant(new King(PlayerColor.WHITE));
         board[4][7].setOccupant(new King(PlayerColor.BLACK));
-    }
-
-    public int getPosition() {
-        return board;
     }
 
     public Piece getPiece(int x, int y) {
