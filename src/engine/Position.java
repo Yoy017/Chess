@@ -1,18 +1,33 @@
 package engine;
 
 public class Position {
-    private int row, col;
+    private int x;
+    private int y;
+    private Piece piece
 
-    public Position(int row, int col) {
-        this.row = row;
-        this.col = col;
+    public Position(int x, int y) {
+        this.x = x;
+        this.y = y;
+        this.piece = null;
     }
 
-    public int row() { return this.row; }
-    public int col() { return this.col; }
+    public int getX() {
+        return x;
+    }
 
-    public void setRow(int newRow) { this.row = newRow; }
-    public void setCol(int newCol) { this.col = newCol; }
+    public int getY() {
+        return y;
+    }
 
-//    public void move(Position p) { this.row = p.row(); this.col = p.col(); }
+    public boolean isOccupied() {
+        return piece != null;
+    }
+
+    public Piece getOccupant() {
+        return piece;
+    }
+
+    public void setOccupant(Piece piece) {
+        this.piece = piece;
+    }
 }
